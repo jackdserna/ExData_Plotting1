@@ -8,7 +8,7 @@ data<- mutate(data, datetime = dmy_hms(paste(Date, Time)),
               Date = as.Date(Date, "%d/%m/%Y"))
 sub<- filter(data, Date == as.Date("2007-02-01") | Date ==  as.Date("2007-02-02"))
 
-hist(sub$Global_active_power, col = 'green',
-     xlab = 'Global Active Power(kilowatts', 
+hist(sub$Global_active_power, col = 'red',
+     xlab = 'Global Active Power (kilowatts)', 
      ylab = 'Frequency',
      main = 'Global Active Power')
